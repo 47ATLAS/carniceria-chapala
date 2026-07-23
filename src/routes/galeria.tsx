@@ -1,0 +1,48 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { SiteLayout } from "@/components/SiteLayout";
+import { Reveal } from "@/components/Reveal";
+import { TiltCard } from "@/components/TiltCard";
+import hero from "@/assets/hero-meat.jpg";
+import shop from "@/assets/shop-interior.jpg";
+import hands from "@/assets/butcher-hands.jpg";
+import cuts from "@/assets/cuts-array.jpg";
+
+export const Route = createFileRoute("/galeria")({
+  head: () => ({
+    meta: [
+      { title: "Galería — Carnicería Chapala" },
+      { name: "description", content: "Un vistazo a nuestros cortes y a la tienda." },
+      { property: "og:title", content: "Galería — Carnicería Chapala" },
+      { property: "og:description", content: "Un vistazo a nuestros cortes y a la tienda." },
+    ],
+  }),
+  component: Galeria,
+});
+
+function Galeria() {
+  const imgs = [
+    { src: hero, alt: "Ribeye premium" },
+    { src: shop, alt: "Interior de la tienda" },
+    { src: hands, alt: "Corte a mano" },
+    { src: cuts, alt: "Surtido de cortes" },
+  ];
+  return (
+    <SiteLayout>
+      <section className="mx-auto max-w-7xl px-6 py-24">
+        <p className="mb-4 text-xs uppercase tracking-[0.3em] text-accent">Galería</p>
+        <h1 className="display text-5xl md:text-7xl">La casa por dentro</h1>
+        <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2">
+          {imgs.map((i, k) => (
+            <Reveal key={k} delay={k * 0.08} className={k % 3 === 0 ? "md:row-span-2" : ""}>
+              <TiltCard className="[perspective:1200px]">
+                <figure>
+                  <img src={i.src} alt={i.alt} loading="lazy" className="h-full w-full rounded-sm object-cover" />
+                </figure>
+              </TiltCard>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+    </SiteLayout>
+  );
+}
