@@ -3,7 +3,6 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { Reveal } from "@/components/Reveal";
 import { TiltCard } from "@/components/TiltCard";
 import hero from "@/assets/hero-meat.jpg";
-import shop from "@/assets/shop-interior.jpg";
 import hands from "@/assets/butcher-hands.jpg";
 import cuts from "@/assets/cuts-array.jpg";
 
@@ -22,7 +21,6 @@ export const Route = createFileRoute("/galeria")({
 function Galeria() {
   const imgs = [
     { src: hero, alt: "Ribeye premium" },
-    { src: shop, alt: "Interior de la tienda" },
     { src: hands, alt: "Corte a mano" },
     { src: cuts, alt: "Surtido de cortes" },
   ];
