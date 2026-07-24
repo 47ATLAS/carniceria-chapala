@@ -1,4 +1,4 @@
-const PHONE = "5213331234567";
+const PHONE = "5661746503";
 const MSG = "Hola, quiero hacer un pedido en Carnicería Chapala";
 
 export function WhatsAppButton() {
