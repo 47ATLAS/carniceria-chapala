@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { VariableProximity } from "@/components/VariableProximity";
 import { Reveal } from "@/components/Reveal";
-import butcher from "@/assets/butcher-hands.jpg";
+import cortenegro from "@/assets/corte-negro.jpeg";
 
 export const Route = createFileRoute("/nosotros")({
   head: () => ({
@@ -44,7 +44,7 @@ function Nosotros() {
         </h1>
         <div className="mt-16 grid gap-16 md:grid-cols-2">
           <Reveal>
-            <img src={butcher} alt="Manos del carnicero cortando" className="aspect-[4/5] w-full rounded-sm object-cover" loading="lazy" />
+            <img src={cortenegro} alt="Corte de carne con guantes negros" className="aspect-[4/5] w-full rounded-sm object-cover" loading="lazy" />
           </Reveal>
           <div className="space-y-6 text-lg leading-relaxed text-foreground/85">
             <Reveal delay={0.05}><p>Empezamos en 1972 con un mostrador pequeño y una regla simple: no salir hasta que el último cliente se llevara el corte que quería.</p></Reveal>

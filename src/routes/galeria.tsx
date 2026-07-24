@@ -3,8 +3,10 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { Reveal } from "@/components/Reveal";
 import { TiltCard } from "@/components/TiltCard";
 import hero from "@/assets/hero-meat.jpg";
-import hands from "@/assets/butcher-hands.jpg";
+import cortenegro from "@/assets/corte-negro.jpeg";
 import cuts from "@/assets/cuts-array.jpg";
+import carneCorte from "@/assets/Carne-corte.jpeg";
+import collage from "@/assets/Collage.jpeg";
 
 export const Route = createFileRoute("/galeria")({
   head: () => ({
@@ -21,8 +23,10 @@ export const Route = createFileRoute("/galeria")({
 function Galeria() {
   const imgs = [
     { src: hero, alt: "Ribeye premium" },
-    { src: hands, alt: "Corte a mano" },
+    { src: cortenegro, alt: "Corte de carne con guantes negros" },
     { src: cuts, alt: "Surtido de cortes" },
+    { src: carneCorte, alt: "Corte de carne" },
+    { src: collage, alt: "Collage de la carnicería" },
   ];
   return (
     <SiteLayout>
